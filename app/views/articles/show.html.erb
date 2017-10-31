@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="text-center">
+    <h2><%= @article.title %></h2>
+    <p><%= @article.content %></p>
+    <%= link_to "Edit an article", edit_article_path(id: @article.id) %>
+
+    <%= link_to "Delete an article", article_path(id: @article.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
